@@ -1,0 +1,16 @@
+[
+  {
+    "Id": "713d1ea2-36a8-41d3-85e2-7c73d282c883",
+    "CodigoFiscal": "432888234333",
+    "InscricaoEstadual": "2191398190329",
+    "Nome": "Jo\u00E3o Marcos marcos",
+    "NomeFantasia": "Jo\u00E3o Marcos marcos",
+    "Endereco": "Rua An\u00E9sio Martins Faria Qd.08 Lt.07 3",
+    "Numero": "3",
+    "Bairro": "Pedrolina",
+    "Cidade": "Fortaleza",
+    "Estado": "PI",
+    "DataNascimento": "2000-03-24T00:00:00",
+    "ImagemPath": "/uploads/8567f97d-bc70-4dff-b077-4a8202c37c5e.png"
+  }
+]
