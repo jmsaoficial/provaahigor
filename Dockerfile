@@ -19,4 +19,4 @@ ENV ASPNETCORE_URLS=http://+:5000
 EXPOSE 5000
 
 # Comando para iniciar a aplicação (substitua abaixo)
-ENTRYPOINT ["dotnet", "prova higorr.dll"]
+ENTRYPOINT ["dotnet", "provaahigor.dll"]
