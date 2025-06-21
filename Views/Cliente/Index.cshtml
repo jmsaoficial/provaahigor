@@ -1,0 +1,46 @@
+@model IEnumerable<ProvaHigorr.Models.Cliente>
+@{
+    ViewData["Title"] = "Clientes";
+}
+<h2 class="mb-4">Clientes</h2>
+<a asp-action="Editar" class="btn btn-success mb-3">Novo Cliente</a>
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensagem"]</div>
+}
+<table class="table table-striped table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>CPF/CNPJ</th>
+            <th>Inscrição Estadual</th>
+            <th>Cidade</th>
+            <th>Imagem</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Nome</td>
+                <td>@c.CodigoFiscal</td>
+                <td>@c.InscricaoEstadual</td>
+                <td>@c.Cidade</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(c.ImagemPath))
+                    {
+                        <img src="@c.ImagemPath" width="50" class="rounded" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@c.Id" class="btn btn-primary btn-sm">Editar</a>
+                    <form asp-action="Excluir" asp-route-id="@c.Id" method="post" style="display:inline">
+                        <button type="submit" class="btn btn-danger btn-sm ms-1">Excluir</button>
+                    </form>
+                    <a asp-action="Exportar" asp-route-id="@c.Id" class="btn btn-secondary btn-sm ms-1">Exportar JSON</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
